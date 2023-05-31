@@ -1,7 +1,18 @@
 import { FastField, Form, Formik } from "formik";
 import { Button } from "reactstrap";
+import PropTypes from "prop-types";
 import InputField from "../../../../customFields/InputField";
 import SelectField from "../../../../customFields/selectField";
+import { DEPARTMENT } from "../../../../constants/Department";
+import { POSITION } from "../../../../constants/Position";
+
+AccountForm.propTypes = {
+  onSubmit: PropTypes.func,
+};
+
+AccountForm.defaultProps = {
+  onSubmit: null,
+};
 
 function AccountForm(props) {
   return (
@@ -49,10 +60,7 @@ function AccountForm(props) {
               component={SelectField}
               label="Department"
               placeholder="Department input"
-              options={[
-                { value: 1, label: "a" },
-                { value: 2, label: "b" },
-              ]}
+              options={DEPARTMENT}
               disabled={false}
             />
             <FastField
@@ -60,10 +68,7 @@ function AccountForm(props) {
               component={SelectField}
               label="Position"
               placeholder="Position input"
-              options={[
-                { value: 1, label: "a" },
-                { value: 2, label: "b" },
-              ]}
+              options={POSITION}
               disabled={false}
             />
             <div style={{ textAlign: "end" }}>
