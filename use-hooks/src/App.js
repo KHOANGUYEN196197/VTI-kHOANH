@@ -1,3 +1,4 @@
+import HookUseReducer from "./hook-ues-reducer";
 import HookUseCallBack from "./hook-use-callback";
 import HookUseEffect from "./hook-use-effect";
 import HookUseMemo from "./hook-use-memo";
@@ -13,7 +14,8 @@ function App() {
       {/* <HookUserRef /> */}
       {/* <ReactMemo /> */}
       {/* <HookUseCallBack /> */}
-      <HookUseMemo />
+      {/* <HookUseMemo /> */}
+      <HookUseReducer />
     </div>
   );
 }
