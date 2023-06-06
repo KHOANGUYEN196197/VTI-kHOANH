@@ -18,10 +18,11 @@ function PhotoForm(props) {
   // npm i --save react-select
   const isAddMode = props.isAddMode;
   const initialValues = props.initialValues;
+  if (!initialValues) return null;
   const validate = {
     title: Yup.string().required("This field is required."),
 
-    categoryId: Yup.number().required("This field is required."),
+    categoryId: Yup.string().required("This field is required."),
 
     photo: Yup.string().required("This field is required."),
   };
@@ -34,8 +35,7 @@ function PhotoForm(props) {
     >
       {(formikProps) => {
         // do something ...
-        const { values, errors, touched, isSubmitting } = formikProps;
-        console.log({ values, errors, touched });
+        const { isSubmitting } = formikProps;
         return (
           <Form>
             <FastField
