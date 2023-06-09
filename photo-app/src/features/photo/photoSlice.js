@@ -21,7 +21,18 @@ const photoSlice = createSlice({
         state.isLoading = false;
       })
       .addCase(postPhoto.fulfilled, (state, action) => {
-        state.photos.push(action.payload);
+        // state.photos.push(action.payload);
+        console.log('vo fulfilled');
+      })
+      .addCase(postPhoto.rejected, (state, action) => {
+        // state.photos.push(action.payload);
+        console.log('vo rejected');
+
+      })
+      .addCase(postPhoto.pending, (state, action) => {
+        // state.photos.push(action.payload);
+        console.log('vo pending');
+
       })
       .addCase(editPhoto.fulfilled, (state, action) => {
         const newPhoto = action.payload;

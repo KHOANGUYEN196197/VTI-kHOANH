@@ -4,24 +4,21 @@ import { photoAPIUrl } from "config/apiConfig";
 
 export const getListPhoto = createAsyncThunk(
   "getListPhoto",
-  async (_, { getState }) => {
-    const { photos } = getState().photoReducer;
-    if (photos.length === 0) {
+  async () => {
       try {
         const response = await axios.get(photoAPIUrl);
         return response.data;
       } catch (error) {
         throw new Error(error.message);
       }
-    } else {
-      return photos;
-    }
   }
 );
-export const postPhoto = createAsyncThunk("postPhoto", async (data) => {
+export const postPhoto = createAsyncThunk("postPhoto", async (data, {dispatch}) => {
   try {
     const response = await axios.post(photoAPIUrl, data);
-    return response.data;
+    if(response.status === 201) {
+      dispatch(getListPhoto);
+    }
   } catch (error) {
     throw new Error(error.message);
   }
