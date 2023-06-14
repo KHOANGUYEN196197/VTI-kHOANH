@@ -1,5 +1,6 @@
 import HookUseCallBack from "./hook-use-callback";
 import HookUseEffect from "./hook-use-effect";
+import HookUseLayoutEffect from "./hook-use-layoutEffect";
 import HookUseMemo from "./hook-use-memo";
 import HookUseReducer from "./hook-use-reducer";
 import HookUserRef from "./hook-use-ref";
@@ -10,14 +11,15 @@ import ReactMemo from "./react-memo";
 function App() {
   return (
     <div className="App">
-      {/* <HookUseState /> */}
+      <HookUseState />
       {/* <HookUseEffect /> */}
+      {/* <HookUseLayoutEffect /> */}
       {/* <HookUserRef /> */}
       {/* <ReactMemo /> */}
       {/* <HookUseCallBack /> */}
       {/* <HookUseMemo /> */}
       {/* <HookUseReducer /> */}
-      <ReactContext />
+      {/* <ReactContext /> */}
     </div>
   );
 }

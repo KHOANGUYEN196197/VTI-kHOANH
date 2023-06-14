@@ -1,17 +1,20 @@
 ==============================================
 import {
-    useStates,
-    useEffects,
-    useLayoutEffects,
+    useState,
+    useEffect,
+    useLayoutEffect,
     useRef,
     useCallback,
     useMemo,
     useReducer,
     useContext,
     useImperativeHandle,
-    useDebugValue,
 } from 'react';
 
+
+1. useState, useEffect, useLayoutEffect, useRef
+2. useCallback, useMemo, react.memo
+3. useReducer, useContext, react.Context, useImperativeHandle
 
 
 // chưa dùng Hooks, chỉ là UI Components
