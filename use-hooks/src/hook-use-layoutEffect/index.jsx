@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import {useLayoutEffect, useState } from "react";
 
 function HookUseLayoutEffect(){
 
 const [count, setCount] = useState(0);
 
-useEffect(() =>{
+useLayoutEffect(() =>{
     if(count > 3) setCount(0)
 
 }, [count])

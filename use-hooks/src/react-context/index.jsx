@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { LightContext } from "./context/LightContext";
+import { LightContext, LightProvider } from "./context/LightContext";
 import ListLight from "./list-light";
 
 //Context
@@ -11,7 +11,7 @@ import ListLight from "./list-light";
 
 function ReactContext() {
   const context = useContext(LightContext);
-  console.log(context);
+  console.log(11111, context);
   return (
     <div style={{ padding: "20px 30px" }}>
       <button onClick={context.handleToggle}>Toggle</button>

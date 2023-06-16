@@ -6,10 +6,9 @@ function ReactMemo() {
     count: 0,
     click: 0,
   });
-  console.log(count);
   return (
     <div style={{ padding: 30 }}>
-      <Content count={count} />
+      <Content />
       <h1>{count.count}</h1>
       <button
         onClick={() =>
