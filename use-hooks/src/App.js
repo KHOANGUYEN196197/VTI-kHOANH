@@ -24,7 +24,7 @@ function App() {
         {/* <HookUseMemo /> */}
         {/* <ImperativeHandle /> */}
         {/* <CustomHook /> */}
-        {/* <HookUseReducer /> */}
+        <HookUseReducer />
         {/* <ReactContext /> */}
       </div>
     </LightProvider>

@@ -1,19 +1,22 @@
 import { useReducer } from "react";
-//useReducer
+// useReducer
 // 1. initialState = 0
 // 2. action up: count+ 1, down: count-1
 // 3. Reducer
 // 4. Dispatch
 
+// tach reducer
 const initialState = {
   todo: "",
   todos: [],
 };
-
+//
+// tach constants
 const SET_TODO = "setTodo";
 const ADD_TODO = "addTodo";
 const REMOVE_TODO = "removeTodo";
-
+//
+// tach action
 const setTodo = (payload) => {
   return {
     type: SET_TODO,
@@ -32,7 +35,9 @@ const removeTodo = (payload) => {
     payload,
   };
 };
+//
 
+// tach reducer
 const reducer = (state, action) => {
   switch (action.type) {
     case SET_TODO:
@@ -54,6 +59,7 @@ const reducer = (state, action) => {
       return state;
   }
 };
+//
 
 function Todo() {
   const [state, dispatch] = useReducer(reducer, initialState);
